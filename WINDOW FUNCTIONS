@@ -1,0 +1,4 @@
+select id,account_id,total,
+RANK() OVER (PARTITION BY account_id order by TOTAL DESC) as total_rank from 
+ORDERS;
+
